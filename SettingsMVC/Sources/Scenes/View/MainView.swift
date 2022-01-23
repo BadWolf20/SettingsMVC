@@ -11,6 +11,7 @@ import UIKit
 
 class MainView: UIView {
 
+
     // MARK: - Configuration
     func configureView(with settings: [Setting]) {
         self.settingsList = settings
@@ -20,6 +21,8 @@ class MainView: UIView {
     // MARK: - Private properties
     private var settingsList = [Setting]()
     private var set = [Setting]()
+    private let notificationCenter = UNUserNotificationCenter.current()
+
 
     // MARK: - Views
     lazy var tableView: UITableView = {
@@ -50,6 +53,7 @@ class MainView: UIView {
 
     private func commonInit() {
         backgroundColor = .white
+        askAccess()
         setupHierarchy()
         setupLayout()
     }
@@ -69,13 +73,13 @@ class MainView: UIView {
 }
 
 
-//  Добавление таблицы
+// MARK: - UITableViewDataSource, UITableViewDelegate
 extension MainView: UITableViewDataSource, UITableViewDelegate {
 
     // При выборе строки
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        //sendNotification(title: "You push '\(settingsList[getSelectedRowNumber()].name)' button")
+        sendNotification(title: "You push '\(settingsList[getSelectedRowNumber()].name)' button")
         print("You push '\(settingsList[getSelectedRowNumber()].name)' button")
 
         moveToSetttingView(settingsList[getSelectedRowNumber()].name)
@@ -166,5 +170,43 @@ extension MainView: UITableViewDataSource, UITableViewDelegate {
         }
     }
 
-
 }
+
+// MARK: - notification
+extension MainView: UNUserNotificationCenterDelegate{
+
+    // Запрос доступа
+    func askAccess() {
+        notificationCenter.requestAuthorization(options: [.alert, .sound, .badge]){(granted, error)
+            in
+            guard granted else { return }
+            self.notificationCenter.getNotificationSettings { (settings) in
+                guard settings.authorizationStatus == .authorized else { return }
+            }
+        }
+        notificationCenter.delegate = self
+    }
+
+    // Вывод уведомления
+    func sendNotification(title: String) {
+        let content = UNMutableNotificationContent()
+        content.title = title
+        //content.body = body
+        content.sound = UNNotificationSound.default
+
+        let request = UNNotificationRequest(identifier: "Notification", content: content, trigger: .none)
+        notificationCenter.add(request) { (error) in
+            //print(error?.localizedDescription)
+        }
+    }
+
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.sound, .banner])
+    }
+
+    // Срабатывание при нажатии на уведомление
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        print(#function)
+    }
+}
+
