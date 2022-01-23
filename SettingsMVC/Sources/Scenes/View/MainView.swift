@@ -58,7 +58,6 @@ class MainView: UIView {
 
     private func setupHierarchy() {
         addSubview(tableView)
-
     }
 
     private func setupLayout() {
@@ -88,14 +87,14 @@ extension MainView: UITableViewDataSource, UITableViewDelegate {
             case 0:
                 selectedRowNumber = indexPath.row
             case 1...:
-                selectedRowNumber = cot(indexPath.section) + indexPath.row
+                selectedRowNumber = getRowsNumber(indexPath.section) + indexPath.row
             default:
                 selectedRowNumber = 666
             }
             return selectedRowNumber
         }
 
-        func cot(_ sectionNum: Int) -> Int {
+        func getRowsNumber(_ sectionNum: Int) -> Int {
             var c = Int()
             var out = Int()
             for i in Setting.Block.allValues {
