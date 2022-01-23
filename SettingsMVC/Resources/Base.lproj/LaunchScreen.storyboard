@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Loading Logo" translatesAutoresizingMaskIntoConstraints="NO" id="YwO-Vu-jB8">
+                                <rect key="frame" x="50" y="369.5" width="314" height="157"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YwO-Vu-jB8" secondAttribute="height" multiplier="2:1" id="PaO-pH-2TI"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbI-MY-Aon">
+                                <rect key="frame" x="151" y="779.5" width="112.5" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" systemColor="systemTealColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YwO-Vu-jB8" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="1v2-Rk-rcs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mbI-MY-Aon" secondAttribute="bottom" constant="50" id="2LK-b1-eaN"/>
+                            <constraint firstAttribute="trailing" secondItem="YwO-Vu-jB8" secondAttribute="trailing" constant="50" id="Vj5-lq-WAX"/>
+                            <constraint firstItem="mbI-MY-Aon" firstAttribute="top" relation="greaterThanOrEqual" secondItem="YwO-Vu-jB8" secondAttribute="bottom" priority="999" constant="20" id="XAi-8L-SJB"/>
+                            <constraint firstItem="mbI-MY-Aon" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="YWA-qq-bHs"/>
+                            <constraint firstItem="YwO-Vu-jB8" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="lUU-8q-oVY"/>
+                            <constraint firstItem="YwO-Vu-jB8" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="50" id="yHo-SJ-R6R"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Loading Logo" width="598" height="670"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

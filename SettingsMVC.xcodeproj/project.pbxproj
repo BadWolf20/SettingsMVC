@@ -56,15 +56,71 @@
 		300EF4C0279D1BC900926015 /* SettingsMVC */ = {
 			isa = PBXGroup;
 			children = (
-				300EF4C1279D1BC900926015 /* AppDelegate.swift */,
-				300EF4C3279D1BC900926015 /* SceneDelegate.swift */,
-				300EF4C5279D1BC900926015 /* ViewController.swift */,
+				300EF4D5279D1C1000926015 /* Sources */,
+				300EF4D6279D1C1900926015 /* Resources */,
+			);
+			path = SettingsMVC;
+			sourceTree = "<group>";
+		};
+		300EF4D5279D1C1000926015 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				300EF4D7279D1C4100926015 /* App */,
+				300EF4D8279D1C4800926015 /* Scenes */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		300EF4D6279D1C1900926015 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				300EF4C7279D1BC900926015 /* Main.storyboard */,
 				300EF4CA279D1BCA00926015 /* Assets.xcassets */,
 				300EF4CC279D1BCA00926015 /* LaunchScreen.storyboard */,
 				300EF4CF279D1BCA00926015 /* Info.plist */,
 			);
-			path = SettingsMVC;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		300EF4D7279D1C4100926015 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				300EF4C1279D1BC900926015 /* AppDelegate.swift */,
+				300EF4C3279D1BC900926015 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		300EF4D8279D1C4800926015 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				300EF4DB279D1C8200926015 /* Model */,
+				300EF4DA279D1C7500926015 /* View */,
+				300EF4D9279D1C6000926015 /* Controller */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		300EF4D9279D1C6000926015 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				300EF4C5279D1BC900926015 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		300EF4DA279D1C7500926015 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		300EF4DB279D1C8200926015 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,7 +347,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9CUB4SJUB5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SettingsMVC/Info.plist;
+				INFOPLIST_FILE = SettingsMVC/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +375,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9CUB4SJUB5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SettingsMVC/Info.plist;
+				INFOPLIST_FILE = SettingsMVC/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
