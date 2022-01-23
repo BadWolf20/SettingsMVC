@@ -82,6 +82,7 @@
 		300EF4D6279D1C1900926015 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				300EF4E6279D37B700926015 /* Extensions */,
 				300EF4C7279D1BC900926015 /* Main.storyboard */,
 				300EF4CA279D1BCA00926015 /* Assets.xcassets */,
 				300EF4CC279D1BCA00926015 /* LaunchScreen.storyboard */,
@@ -133,6 +134,13 @@
 				300EF4E0279D2B6000926015 /* Setting.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		300EF4E6279D37B700926015 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
